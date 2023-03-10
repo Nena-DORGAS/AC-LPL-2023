@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Compras
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+    <ion-content [fullscreen]="true">
+    <ion-list>
+    <ion-radio-group [(ngModel)]="radioSelecionada">
+    <ion-list-header> Escolha uma opção: </ion-list-header>
+      
+    <ion-item>
+        <ion-label>PIX</ion-label>
+        <ion-radio value="PIX"></ion-radio>
+    </ion-item>
+
+    </ion-item>
+        <ion-label>Débito</ion-label>
+        <ion-radio value="débito"></ion-radio>
+    </ion-item>
+
+    </ion-radio-group>
+
+    <ion-item>
+        <ion-label>Crédito</ion-label>
+        <ion-radio value="crédito"></ion-radio>
+    </ion-item>
+    </ion-radio-group>
+    <ion-item>
+
+    <ion-label position="floating"> Digite o valor final da compra: </ion-label>
+    <ion-input [(ngModel)]="valor"></ion-input>
+    </ion-item>
+    </ion-list>
+
+<ion-button expand="block" (click)="verificarRadio()">Calcular o valor final</ion-button>
+</ion-content>
